@@ -1,23 +1,13 @@
 package ufrn.alvarofpp;
 
 public class NodeBST {
-    private int chave;
     private int conteudo;
     private NodeBST esq, dir;
 
-    public NodeBST(int chave, int conteudo) {
-        this.chave = chave;
+    public NodeBST(int conteudo) {
         this.conteudo = conteudo;
         this.esq = null;
         this.dir = null;
-    }
-
-    public int getChave() {
-        return chave;
-    }
-
-    public void setChave(int chave) {
-        this.chave = chave;
     }
 
     public int getConteudo() {
