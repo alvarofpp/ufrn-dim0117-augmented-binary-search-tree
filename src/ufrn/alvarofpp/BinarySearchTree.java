@@ -54,6 +54,11 @@ public class BinarySearchTree {
      * @return Nó raiz
      */
     public NodeBST remocao(NodeBST node, int conteudo) {
+        // Ignora a remoção de um elemento que não existe
+        if (node == null) {
+            return null;
+        }
+
         if (node.getConteudo() == conteudo) {
             NodeBST p, q;
             if (node.getEsq() == null ) {
