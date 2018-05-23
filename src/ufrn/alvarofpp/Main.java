@@ -35,9 +35,21 @@ public class Main {
             e.printStackTrace();
         }
 
-
+        System.out.println("Inicial");
         System.out.print("(");
         bst.toString(node);
-        System.out.print(" )");
+        System.out.println(" )");
+
+        System.out.println("Inserindo novo elemento");
+        node = bst.insercao(node, new NodeBST(22));
+        System.out.print("(");
+        bst.toString(node);
+        System.out.println(" )");
+
+        System.out.println("Removendo elemento");
+        node = bst.remocao(node, 22);
+        System.out.print("(");
+        bst.toString(node);
+        System.out.println(" )");
     }
 }

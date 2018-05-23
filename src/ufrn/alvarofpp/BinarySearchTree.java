@@ -50,30 +50,39 @@ public class BinarySearchTree {
      * Remove o nó da árvore
      *
      * @param node Nó que se deseja remover
+     * @param conteudo Conteudo da árvore que se deseja remover
      * @return Nó raiz
      */
-    public NodeBST remocao(NodeBST node) {
-        NodeBST p, q;
-        if (node.getEsq() == null ) {
-            q = node.getDir();
+    public NodeBST remocao(NodeBST node, int conteudo) {
+        if (node.getConteudo() == conteudo) {
+            NodeBST p, q;
+            if (node.getEsq() == null ) {
+                q = node.getDir();
+                return q;
+            }
+
+            p = node;
+            q = node.getEsq();
+            while (q.getDir() != null) {
+                p = q;
+                q = q.getDir();
+            }
+
+            if (p != node) {
+                p.setDir(q.getEsq());
+                q.setEsq(node.getEsq());
+            }
+
+            q.setDir(node.getDir());
+
             return q;
+        } else if (node.getConteudo() < conteudo) {
+            node.setDir(this.remocao(node.getDir(), conteudo));
+        } else {
+            node.setEsq(this.remocao(node.getEsq(), conteudo));
         }
 
-        p = node;
-        q = node.getEsq();
-        while (q.getDir() != null) {
-            p = q;
-            q = q.getDir();
-        }
-
-        if (p != node) {
-            p.setDir(q.getEsq());
-            q.setEsq(node.getEsq());
-        }
-
-        q.setDir(node.getDir());
-
-        return q;
+        return node;
     }
 
     /**
