@@ -8,6 +8,8 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
+        // Arquivo para testes
+        final String FILENAME = "/home/roleta/IdeaProjects/edb2-trabalho-abb/src/ufrn/alvarofpp/input/input1.txt";
         // Objeto para chamarmos os comandos da árvore
         BinarySearchTree bst = new BinarySearchTree();
         // Nó que conterá a raiz
@@ -16,8 +18,9 @@ public class Main {
         BufferedReader buffer = null;
 
         try {
-            buffer = new BufferedReader(new FileReader("/home/roleta/IdeaProjects/edb2-trabalho-abb/src/ufrn/alvarofpp/input/input1.txt"));
-
+            // Buffer de leitura
+            buffer = new BufferedReader(new FileReader(FILENAME));
+            // Valores salvos no arquivo
             int valores[] = Arrays.asList(buffer.readLine().split(" "))
                     .stream()
                     .mapToInt(Integer::parseInt)

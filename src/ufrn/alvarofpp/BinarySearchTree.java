@@ -2,16 +2,30 @@ package ufrn.alvarofpp;
 
 public class BinarySearchTree {
 
-    public NodeBST busca(NodeBST node, int key) {
-        if (node == null || node.getConteudo() == key) {
+    /**
+     * Procura o Nó na árvore
+     *
+     * @param node Nó usado para percorrer a árvore (inicialmente é a raiz)
+     * @param conteudo Conteúdo que se usa para encontrar o nó
+     * @return Nó desejado ou null caso não tenha encontrado
+     */
+    public NodeBST busca(NodeBST node, int conteudo) {
+        if (node == null || node.getConteudo() == conteudo) {
             return node;
-        } else if (node.getEsq() != null && node.getConteudo() > key) {
-            return this.busca(node.getEsq(), key);
+        } else if (node.getEsq() != null && node.getConteudo() > conteudo) {
+            return this.busca(node.getEsq(), conteudo);
         } else {
-            return this.busca(node.getDir(), key);
+            return this.busca(node.getDir(), conteudo);
         }
     }
 
+    /**
+     * Insere um novo nó na árvore
+     *
+     * @param node Inicialmente é a raiz
+     * @param nodeNew Nó que se deseja inserir
+     * @return Nó raiz
+     */
     public NodeBST insercao(NodeBST node, NodeBST nodeNew) {
         if (node == null) {
             return nodeNew;
@@ -26,6 +40,12 @@ public class BinarySearchTree {
         return node;
     }
 
+    /**
+     * Remove o nó da árvore
+     *
+     * @param node Nó que se deseja remover
+     * @return Nó raiz
+     */
     public NodeBST remocao(NodeBST node) {
         NodeBST p, q;
         if (node.getEsq() == null ) {
@@ -50,6 +70,11 @@ public class BinarySearchTree {
         return q;
     }
 
+    /**
+     * Imprime a árvore por ordem simétrica
+     *
+     * @param node Inicialmente é o nó raiz
+     */
     public void toString(NodeBST node) {
         if (node == null) {
             return;
