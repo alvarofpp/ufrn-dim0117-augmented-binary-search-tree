@@ -27,8 +27,14 @@ public class BinarySearchTree {
      * @return Nó raiz
      */
     public NodeBST insercao(NodeBST node, NodeBST nodeNew) {
+        // Para a inserção do primeiro elemento na árvore
         if (node == null) {
             return nodeNew;
+        }
+
+        // Garante que não se tenha elementos duplicados
+        if (node.getConteudo() == nodeNew.getConteudo()) {
+            return node;
         }
 
         if (node.getConteudo() > nodeNew.getConteudo()) {
