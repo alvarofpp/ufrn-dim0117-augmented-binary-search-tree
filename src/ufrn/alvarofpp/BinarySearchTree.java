@@ -86,9 +86,9 @@ public class BinarySearchTree {
         }
 
         this.toString(node.getEsq());
+        System.out.print(" " + node.getConteudo());
         this.toString(node.getDir());
 
-        System.out.print(" " + node.getConteudo());
     }
 
 }
