@@ -91,6 +91,33 @@ public class BinarySearchTree {
         return node;
     }
 
+    public int contarNodesLados(NodeBST node) {
+        // Se não for um nó válido
+        if (node == null) {
+            return 0;
+        }
+
+        // Se for um nó final
+        if ((node.getEsq() == null) && (node.getDir() == null)) {
+            return 1;
+        }
+
+        node.setQtdeEsq(this.contarNodesLados(node.getEsq()));
+        node.setQtdeDir(this.contarNodesLados(node.getDir()));
+
+        return (node.getQtdeEsq() + node.getQtdeDir() + 1);
+    }
+
+    public void imprimirNodesLados(NodeBST node) {
+        if (node == null) {
+            return;
+        }
+
+        this.imprimirNodesLados(node.getEsq());
+        System.out.println(node.getQtdeEsq() + " <- " + node.getConteudo() + " -> " + node.getQtdeDir());
+        this.imprimirNodesLados(node.getDir());
+    }
+
     /**
      * Imprime a árvore por ordem simétrica
      *
@@ -109,7 +136,6 @@ public class BinarySearchTree {
         this.toString(node.getEsq());
         System.out.print(" " + node.getConteudo());
         this.toString(node.getDir());
-
     }
 
     /**
@@ -135,7 +161,6 @@ public class BinarySearchTree {
         }
 
         return false;
-
     }
 
 }

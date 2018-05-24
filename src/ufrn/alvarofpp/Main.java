@@ -55,5 +55,9 @@ public class Main {
         System.out.println(" )");
 
         System.out.println("É cheia: " + (bst.ehCheia(node)?"SIM":"NÃO"));
+
+        System.out.println("contarNodesLados: ");
+        bst.contarNodesLados(node);
+        bst.imprimirNodesLados(node);
     }
 }
