@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ee055d7d-6493-413d-b7d6-181573e1e4ea" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/ufrn/alvarofpp/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/ufrn/alvarofpp/BinarySearchTree.java" />
-      <change beforePath="$PROJECT_DIR$/src/ufrn/alvarofpp/Main.java" afterPath="$PROJECT_DIR$/src/ufrn/alvarofpp/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/ufrn/alvarofpp/NodeBST.java" afterPath="$PROJECT_DIR$/src/ufrn/alvarofpp/NodeBST.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ufrn/alvarofpp/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="60" column="37" lean-forward="true" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+            <state relative-caret-position="355">
+              <caret line="54" column="33" lean-forward="true" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ufrn/alvarofpp/BinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="102" column="9" lean-forward="true" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
+            <state relative-caret-position="-563">
+              <caret line="124" column="44" lean-forward="false" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -245,12 +243,12 @@
       <workItem from="1526999584106" duration="591000" />
       <workItem from="1527106660935" duration="3047000" />
       <workItem from="1527156893002" duration="586000" />
-      <workItem from="1527178497077" duration="1769000" />
+      <workItem from="1527178497077" duration="2113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12836000" />
+    <option name="totallyTimeSpent" value="13180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-37" width="1366" height="731" extended-state="6" />
@@ -547,21 +545,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ufrn/alvarofpp/BinarySearchTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="102" column="9" lean-forward="true" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ufrn/alvarofpp/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="60" column="37" lean-forward="true" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+        <state relative-caret-position="355">
+          <caret line="54" column="33" lean-forward="true" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ufrn/alvarofpp/BinarySearchTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-563">
+          <caret line="124" column="44" lean-forward="false" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -91,6 +91,12 @@ public class BinarySearchTree {
         return node;
     }
 
+    /**
+     * Conta os nós a direita e esquerda do node, atualizando os valores
+     *
+     * @param node
+     * @return
+     */
     public int contarNodesLados(NodeBST node) {
         // Se não for um nó válido
         if (node == null) {
@@ -102,13 +108,21 @@ public class BinarySearchTree {
             return 1;
         }
 
+        // Recursivo para atualizar toda a árvore
         node.setQtdeEsq(this.contarNodesLados(node.getEsq()));
         node.setQtdeDir(this.contarNodesLados(node.getDir()));
 
+        // Retorna a quantidade de nós para o "nó pai"
         return (node.getQtdeEsq() + node.getQtdeDir() + 1);
     }
 
+    /**
+     * Imprime o conteudo de cada nó e a quantidade de nós a esquerda e direita, não nessa ordem
+     *
+     * @param node
+     */
     public void imprimirNodesLados(NodeBST node) {
+        // Quando não tiver nó para imprimir
         if (node == null) {
             return;
         }
