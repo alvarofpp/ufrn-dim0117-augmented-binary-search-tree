@@ -59,11 +59,12 @@ public class BinarySearchTree {
             return null;
         }
 
+        // Caso se deseje remover a raiz
         if (node.getConteudo() == conteudo) {
             NodeBST p, q;
+
             if (node.getEsq() == null ) {
-                q = node.getDir();
-                return q;
+                return node.getDir();
             }
 
             p = node;
@@ -108,6 +109,32 @@ public class BinarySearchTree {
         this.toString(node.getEsq());
         System.out.print(" " + node.getConteudo());
         this.toString(node.getDir());
+
+    }
+
+    /**
+     * Verifica se a árvore é cheia ou não
+     *
+     * @param node
+     * @return
+     */
+    public boolean ehCheia(NodeBST node) {
+        // Se for uma árvore vazia
+        if (node == null) {
+            return true;
+        }
+
+        // Se for folha
+        if ((node.getEsq() == null) && (node.getDir() == null)) {
+            return true;
+        }
+
+        // Se tiver subarvores
+        if ((node.getEsq() != null) && (node.getDir() != null)) {
+            return ((this.ehCheia(node.getEsq())) && (this.ehCheia(node.getDir())));
+        }
+
+        return false;
 
     }
 

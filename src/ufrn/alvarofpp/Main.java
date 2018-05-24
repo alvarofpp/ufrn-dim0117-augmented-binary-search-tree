@@ -53,5 +53,7 @@ public class Main {
         node = bst.remocao(node, 22);
         bst.toString(node);
         System.out.println(" )");
+
+        System.out.println("É cheia: " + (bst.ehCheia(node)?"SIM":"NÃO"));
     }
 }
